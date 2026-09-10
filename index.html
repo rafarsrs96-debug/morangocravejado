@@ -10,8 +10,20 @@
 html{scroll-behavior:smooth}
 body{font-family:'Montserrat',sans-serif;background:#fff8f9;color:#261214;overflow-x:hidden}
 .hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 10% 20%,rgba(255,255,255,.13),transparent 25%),radial-gradient(circle at 90% 80%,rgba(255,255,255,.10),transparent 25%),linear-gradient(135deg,#760c1d,#c91438);color:#fff}
-.hero:before{content:"🍓  🍓  🍓\\A  🍓  🍓  🍓\\A 🍓  🍓  🍓";white-space:pre;position:absolute;right:-45px;top:20px;font-size:110px;line-height:1.45;letter-spacing:12px;opacity:.16;filter:saturate(1.25);transform:rotate(-12deg);animation:float 6s ease-in-out infinite;pointer-events:none}
-.hero:after{content:"🍓  🍓\\A   🍓  🍓\\A 🍓  🍓";white-space:pre;position:absolute;left:-30px;bottom:10px;font-size:85px;line-height:1.5;letter-spacing:8px;opacity:.12;filter:saturate(1.2);transform:rotate(10deg);animation:float 5s ease-in-out infinite reverse;pointer-events:none}
+.hero:before,.hero:after{content:none}
+.strawberry-bg{position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:none}
+.strawberry-bg img{position:absolute;width:clamp(70px,9vw,145px);height:auto;object-fit:contain;opacity:.28;filter:drop-shadow(0 12px 18px rgba(0,0,0,.16));animation:strawberryFloat 6s ease-in-out infinite}
+.strawberry-bg .s1{top:3%;left:2%;transform:rotate(-12deg);animation-delay:0s}
+.strawberry-bg .s2{top:5%;left:24%;transform:rotate(9deg);animation-delay:-1s}
+.strawberry-bg .s3{top:2%;left:47%;transform:rotate(-7deg);animation-delay:-2s}
+.strawberry-bg .s4{top:6%;right:24%;transform:rotate(12deg);animation-delay:-3s}
+.strawberry-bg .s5{top:4%;right:5%;transform:rotate(-10deg);animation-delay:-4s}
+.strawberry-bg .s6{bottom:4%;left:7%;transform:rotate(8deg);animation-delay:-2.5s}
+.strawberry-bg .s7{bottom:2%;left:28%;transform:rotate(-10deg);animation-delay:-1.5s}
+.strawberry-bg .s8{bottom:5%;right:35%;transform:rotate(9deg);animation-delay:-3.5s}
+.strawberry-bg .s9{bottom:3%;right:8%;transform:rotate(-8deg);animation-delay:-.5s}
+@keyframes strawberryFloat{0%,100%{margin-top:0}50%{margin-top:-18px}}
+@media(max-width:750px){.strawberry-bg img{width:70px;opacity:.22}.strawberry-bg .s2,.strawberry-bg .s4,.strawberry-bg .s7{display:none}}
 .hero{background-color:#8d0b24;background-image:radial-gradient(circle at 15% 15%,rgba(255,255,255,.12),transparent 24%),radial-gradient(circle at 85% 75%,rgba(255,255,255,.10),transparent 28%),linear-gradient(135deg,#690818,#d3163f)}
 .container{width:92%;max-width:1100px;margin:auto}
 .hero-content{max-width:780px;position:relative;z-index:2;animation:fadeUp .9s ease}
@@ -74,13 +86,24 @@ footer{background:#130709;color:#8f7b7f;text-align:center;padding:25px;font-size
 <body>
 
 <section class="hero">
+<div class="strawberry-bg" aria-hidden="true">
+  <img class="s1" src="https://commons.wikimedia.org/wiki/Special:FilePath/Strawberry%20(transparent%20background).png" alt="">
+  <img class="s2" src="https://commons.wikimedia.org/wiki/Special:FilePath/Strawberry%20(transparent%20background).png" alt="">
+  <img class="s3" src="https://commons.wikimedia.org/wiki/Special:FilePath/Strawberry%20(transparent%20background).png" alt="">
+  <img class="s4" src="https://commons.wikimedia.org/wiki/Special:FilePath/Strawberry%20(transparent%20background).png" alt="">
+  <img class="s5" src="https://commons.wikimedia.org/wiki/Special:FilePath/Strawberry%20(transparent%20background).png" alt="">
+  <img class="s6" src="https://commons.wikimedia.org/wiki/Special:FilePath/Strawberry%20(transparent%20background).png" alt="">
+  <img class="s7" src="https://commons.wikimedia.org/wiki/Special:FilePath/Strawberry%20(transparent%20background).png" alt="">
+  <img class="s8" src="https://commons.wikimedia.org/wiki/Special:FilePath/Strawberry%20(transparent%20background).png" alt="">
+  <img class="s9" src="https://commons.wikimedia.org/wiki/Special:FilePath/Strawberry%20(transparent%20background).png" alt="">
+</div>
 <div class="container">
 <div class="hero-content">
 <div class="tag">🍓 NOVA TENDÊNCIA DOS DOCES 🍓</div>
 <h1>Aprenda a fazer o <span>Morango Cravejado</span></h1>
 <p>Descubra o passo a passo para preparar morangos lindos, sofisticados e irresistíveis — mesmo que você esteja começando agora.</p>
 <div class="hero-buttons">
-<a href="#oferta" class="btn btn-primary">QUERO APRENDER AGORA 🍓</a>
+<a href="https://pay.cakto.com.br/m6q4c4w_1098239" class="btn btn-primary">QUERO APRENDER AGORA 🍓</a>
 <div class="security">🔒 Acesso digital • Pagamento seguro</div>
 </div>
 </div>
@@ -125,7 +148,7 @@ footer{background:#130709;color:#8f7b7f;text-align:center;padding:25px;font-size
 <div class="old-price">De R$ 47,00</div>
 <div class="price">R$ 15<small>,90</small></div>
 <div class="price-description">Pagamento único • Acesso digital</div>
-<a href="https://pay.cakto.com.br/iyfj5p9_1098178" class="btn btn-primary offer-button">QUERO GARANTIR MEU ACESSO</a>
+<a href="https://pay.cakto.com.br/m6q4c4w_1098239" class="btn btn-primary offer-button">QUERO GARANTIR MEU ACESSO</a>
 </div>
 </div>
 </div>
@@ -149,7 +172,7 @@ footer{background:#130709;color:#8f7b7f;text-align:center;padding:25px;font-size
 <div class="container">
 <h2>🍓 Comece agora a aprender o Morango Cravejado</h2>
 <p>Tenha acesso ao conteúdo completo por apenas <strong>R$ 15,90</strong>.</p>
-<a href="https://pay.cakto.com.br/iyfj5p9_1098178" class="btn btn-primary" style="margin-top:25px;">QUERO MEU ACESSO</a>
+<a href="https://pay.cakto.com.br/m6q4c4w_1098239" class="btn btn-primary" style="margin-top:25px;">QUERO MEU ACESSO</a>
 </div>
 </section>
 
